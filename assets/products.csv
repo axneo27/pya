@@ -1,0 +1,11 @@
+ProductID,ProductName,Category,Price,Stock,Rating,Description
+101,Wireless Mouse,Electronics,19.99,150,4.5,Ergonomic wireless mouse with USB receiver
+102,Running Shoes,Sportswear,59.99,80,4.2,Breathable running shoes for all terrains
+103,Coffee Maker,Home Appliances,89.99,40,4.8,12-cup programmable coffee maker with auto shut-off
+104,LED Monitor,Electronics,129.99,60,4.6,24-inch Full HD LED monitor with HDMI input
+105,Desk Lamp,Furniture,29.95,200,4.3,Adjustable LED desk lamp with touch controls
+106,Yoga Mat,Sportswear,24.50,300,4.1,Non-slip yoga mat with carrying strap
+107,Smartphone Stand,Accessories,12.75,500,4.4,Universal adjustable stand for phones and tablets
+108,Blender,Home Appliances,49.99,90,4.0,Compact blender with 3-speed settings
+109,Office Chair,Furniture,159.00,25,4.7,Ergonomic office chair with lumbar support
+110,Gaming Keyboard,Electronics,74.99,100,4.9,RGB mechanical keyboard with programmable keys
