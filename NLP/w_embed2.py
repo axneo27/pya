@@ -5,6 +5,17 @@ from gensim.models import Word2Vec
 import gensim
 from nltk.tokenize import sent_tokenize, word_tokenize
 import warnings
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+
+# Завантаження необхідних мовних ресурсів
+nltk.download("punkt")  # Для токенізації
+nltk.download("punkt_tab")  # Для токенізації речень
+nltk.download("stopwords")  # Стоп-слова
+nltk.download("wordnet")  # Для лемматизації
+nltk.download("omw-1.4")  # WordNet мовні дані
 
 warnings.filterwarnings(action="ignore")
 
@@ -28,8 +39,17 @@ for i in sent_tokenize(f):
 
     data.append(temp)
 
+# --- 2. Стоп-слова ---
+print("\n=== Видалення стоп-слів ===")
+stop_words = set(stopwords.words("english"))
+filtered_words = [
+    word for sentence in data for word in sentence if word.lower() not in stop_words and word.isalpha()
+]
+
 # Create CBOW model
-model1 = gensim.models.Word2Vec(data, min_count=1, vector_size=100, window=5)
+model1 = gensim.models.Word2Vec([filtered_words], min_count=1, vector_size=100, window=5)
+
+print(model1.wv.most_similar("children", topn=5))
 
 # Print results
 print(

@@ -5,3 +5,7 @@
 /llama-env
 /tempCodeRunnerFile.py
 .DS_Store
+
+.env
+
+__pycache__/
